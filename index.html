@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="id">
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profil Baitul Ikhlas</title>
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+</head>
+
+<body>
+
+</body>
+</html>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#08111f;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* BACKGROUND ANIMASI */
+
+body::before{
+    content:'';
+    position:fixed;
+    width:200%;
+    height:200%;
+    background:
+    radial-gradient(circle,#00bfff33 2px,transparent 2px);
+    background-size:50px 50px;
+    animation:gerak 20s linear infinite;
+    z-index:-1;
+}
+
+@keyframes gerak{
+    0%{
+        transform:translate(0,0);
+    }
+    100%{
+        transform:translate(-200px,-200px);
+    }
+}
+
+/* NAVBAR */
+
+nav{
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0;
+    background:#00000055;
+    backdrop-filter:blur(10px);
+    z-index:999;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+    color:#00bfff;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#00bfff;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:70px;
+    padding:120px 10%;
+    flex-wrap:wrap;
+}
+
+/* FOTO */
+
+.foto img{
+    width:320px;
+    border-radius:25px;
+    box-shadow:
+    0 0 20px #00bfff,
+    0 0 60px #00bfff55;
+    animation:float 4s ease-in-out infinite;
+    transition:0.4s;
+}
+
+.foto img:hover{
+    transform:scale(1.05);
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-15px);
+    }
+}
+
+.skill{
+    margin:20px 0;
+}
+
+.skill-name{
+    color:white;
+    margin-bottom:5px;
+    font-size:20px;
+}
+
+.progress{
+    width:300px;
+    height:20px;
+    background:#444;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.progress-bar{
+    height:100%;
+    background:#00bfff;
+    border-radius:10px;
+}
+
+/* RESPONSIVE HP */
+@media screen and (max-width: 768px){
+
+    body{
+        padding:10px;
+    }
+
+    .title{
+        font-size:35px;
+        text-align:center;
+    }
+
+    .skill-name{
+        font-size:18px;
+    }
+
+    .progress{
+        width:100%;
+    }
+
+    img{
+        width:100%;
+        height:auto;
+    }
+
+    iframe{
+        width:100%;
+        height:250px;
+    }
+
+    .certificate{
+        width:100%;
+    }
+
+    .container{
+        width:100%;
+        padding:10px;
+    }
+
+    h1,h2,h3,p{
+        text-align:center;
+    }
+
+}
+
+/* TEXT */
+
+.text{
+    max-width:600px;
+    animation:slide 1.5s ease;
+}
+
+@keyframes slide{
+    from{
+        opacity:0;
+        transform:translateX(100px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+.text h1{
+    font-size:65px;
+    margin-bottom:20px;
+}
+
+.text span{
+    color:#00d9ff;
+}
+
+.text p{
+    line-height:1.8;
+    margin-bottom:25px;
+    color:#ddd;
+}
+
+/* BUTTON */
+
+.btn{
+    display:inline-block;
+    padding:14px 30px;
+    background:#00bfff;
+    color:white;
+    border-radius:50px;
+    text-decoration:none;
+    transition:0.4s;
+    font-weight:bold;
+    box-shadow:0 0 20px #00bfff;
+}
+
+.btn:hover{
+    transform:scale(1.1);
+    background:white;
+    color:#00bfff;
+}
+
+/* MUSIC BUTTON */
+
+.music-btn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:60px;
+    height:60px;
+    border:none;
+    border-radius:50%;
+    background:#00bfff;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+    box-shadow:0 0 20px #00bfff;
+    transition:0.3s;
+}
+
+.music-btn:hover{
+    transform:scale(1.1);
+}
+
+/* SECTION */
+
+section{
+    padding:100px 10%;
+}
+
+.title{
+    font-size:45px;
+    color:#00d9ff;
+    margin-bottom:30px;
+}
+
+/* CARD */
+
+.card{
+    background:#0d1b2a;
+    padding:30px;
+    border-radius:20px;
+    transition:0.4s;
+    box-shadow:0 0 20px #00000055;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px #00bfff;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#050b15;
+    color:#aaa;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .text h1{
+        font-size:45px;
+    }
+
+    nav ul{
+        gap:15px;
+        font-size:14px;
+    }
+
+    .foto img{
+        width:250px;
+    }
+}
+
+</style>
+</head>
+<audio id="music" loop>
+    <source src="musik.mp3.mpeg" type="audio/mpeg">
+</audio>
+<body>
+
+
+    </style>
+</head>
+<body>
+
+    
+    <nav>
+        <h2>Baitul Ikhlas</h2>
+
+        <ul>
+            <li><a href="#tentang">Tentang</a></li>
+            <li><a href="#keahlian">Keahlian</a></li>
+            <li><a href="#pengalaman">Pengalaman</a></li>
+            <li><a href="#sertifikat">Sertifikat</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+        </ul>
+    </nav>
+
+    
+<section class="hero" id="tentang">
+
+    <div class="foto">
+        <img src="profile.jpg.jpeg" alt="">
+    </div>
+
+    <div class="text">
+            <h3>Tentang saya</h3>
+
+            <p>
+                Saya adalah seseorang yang memiliki minat besar di bidang
+                teknologi dan pemrograman. Memiliki pengalaman magang
+                di PPTIK ITB dan pengalaman kerja di bidang pelayanan.
+                Saya disiplin, kreatif, cepat belajar dan mampu bekerja
+                dalam tim.
+            </p>
+
+        <div class="card-sertifikat">
+            <div class="icon">
+                <i class="fa-solid fa-certificate"></i>
+            </div>
+
+            <h3> Baitul ikhlas profile </h3>
+
+
+            <iframe 
+                src="cv baitul ikhlas.pdf"
+                class="pdf-view">
+            </iframe>
+
+            <div class="btn-group">
+                <a href="cv baitul ikhlas.pdf" target="_blank" class="btn-lihat">
+                    Lihat Full
+                </a>
+
+                <a href="cv baitul ikhlas.pdf" download class="btn-download">
+                    Download
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- KEAHLIAN -->
+<section id="keahlian">
+    <h2 class="title">Keahlian</h2>
+
+    <div class="skill">
+        <div class="skill-name">Microsoft Word</div>
+        <div class="progress">
+            <div class="progress-bar" style="width:95%"></div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <div class="skill-name">Microsoft Excel</div>
+        <div class="progress">
+            <div class="progress-bar" style="width:75%"></div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <div class="skill-name">Language English</div>
+        <div class="progress">
+            <div class="progress-bar" style="width:80%"></div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <div class="skill-name">Language Indonesia</div>
+        <div class="progress">
+            <div class="progress-bar" style="width:100%"></div>
+        </div>
+    </div>
+
+</section>
+    </section>
+
+    <!-- PENGALAMAN -->
+    <section id="pengalaman">
+        <h2 class="title">work experience</h2>
+
+        <div class="card-container">
+
+            <div class="card">
+                <i class="fa-solid fa-laptop-code"></i>
+                <h3>Web Developer</h3>
+                
+                <p>1.Membuat website modern menggunakan HTML,
+                    CSS dan JavaScript.
+                <p>2.Membuat poster iklan yang menarik dan Mengoptimalkan ide dan konsep yang kreatif dan inovatif
+                <P/>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-building"></i>
+                <h3>Magang PPTIK ITB(institut teknologi bandung)</h3>
+                
+                <p> 1.Belajar networking, server, dan pengembangan teknologi.
+                <p> 2.Memanfaatkan Aplikasi Microsoft Power Point untuk membuat bahan persentasi yang
+                    menarik.
+                <p> 3.Menunjukkan keterampilan dalam menggoperasikan Microsoft Of Office
+                <p/>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-building"></i>
+                <h3> PT Jaya Konsultan Indonesia, jakarta</h3>
+                
+                <p>1.Mampu menerapkan prinsip‑prinsip Desain yang baik
+                <p>2.Berpedoman pada K3
+                <p>3.Mengoptimalkan ide dan konsep yang kreatif dan inovatif            
+                <p/>
+            </div>
+
+
+            <div class="card">
+                <i class="fa-solid fa-headset"></i>
+                <h3>PT PESTA PORA ABADI - OPERASIONAL</h3>
+                    <p>1.Memiliki pengalaman bekerja di bidang pelayanan
+                        dan komunikasi pelanggan.
+                    <p>2.Menjaga kebersihan area kerja sesuai standar perusahaan.
+                    <p>3.Bekerja sama dengan tim untuk mencapai target penjualan harian.
+                    <P>4.Mengatur dan menata produk agar terlihat menarik dan mudah dijangkau pelanggan.
+
+                    
+                <p/>
+            
+
+        </div>
+   
+    
+<section id="sertifikat">
+
+    <h2 class="title">My Certificates</h2>
+
+    <div class="sertifikat-container">
+
+        <!-- Sertifikat.1.pdf -->
+        <div class="card-sertifikat">
+            <div class="icon">
+                <i class="fa-solid fa-award"></i>
+            </div>
+
+            <h3>Sertifikat universitas pamulang</h3>
+
+            <p>
+                Artificial Intelligence as Smart Solution for Indonesia’s Future
+            </p>
+
+            <!-- PDF Preview -->
+            <iframe 
+                src="sertifikat.1.pdf"
+                class="pdf-view">
+            </iframe>
+
+            <!-- Button -->
+            <div class="btn-group">
+                <a href="sertifikat.1.pdf" target="_blank" class="btn-lihat">
+                    Lihat Full
+                </a>
+
+                <a href="sertifikat.1.pdf" download class="btn-download">
+                    Download
+                </a>
+            </div>
+        </div>
+
+
+
+        <!-- Sertifikat.2.pdf -->
+        <div class="card-sertifikat">
+            <div class="icon">
+                <i class="fa-solid fa-certificate"></i>
+            </div>
+
+            <h3>Sertifikat PPTIK ITB institut teknologi bandung</h3>
+
+            <p>
+                Pelatihan jaringan komputer dan konfigurasi
+            </p>
+
+            <iframe 
+                src="sertifikat.2.pdf"
+                class="pdf-view">
+            </iframe>
+
+            <div class="btn-group">
+                <a href="sertifikat.2.pdf" target="_blank" class="btn-lihat">
+                    Lihat Full
+                </a>
+
+                <a href="sertifikat.2.pdf" download class="btn-download">
+                    Download
+                </a>
+            </div>
+        </div>
+ <!-- Sertifikat.3.pdf -->
+        <div class="card-sertifikat">
+            <div class="icon">
+                <i class="fa-solid fa-certificate"></i>
+            </div>
+
+            <h3>Sertifikat PT JAYA  KONSULTAN INDONESIA</h3>
+
+            <p>
+               Belajar networking, server, dan pengembangan teknologi.
+            </p>
+
+            <iframe 
+                src="sertifikat.3.pdf"
+                class="pdf-view">
+            </iframe>
+
+            <div class="btn-group">
+                <a href="sertifikat.3.pdf" target="_blank" class="btn-lihat">
+                    Lihat Full
+                </a>
+
+                <a href="sertifikat.3.pdf" download class="btn-download">
+                    Download
+                </a>
+            </div>
+        </div>
+    </div>
+
+</section>
+    <!-- KONTAK -->
+    <section id="kontak">
+        <h2 class="title">kontak/information</h2>
+
+        <div class="contact-box">
+            <p><i class="fa-solid fa-location-dot"></i> Tangerang Selatan</p>
+
+            <p><i class="fa-solid fa-phone"></i> 081381779034</p>
+
+            <p><i class="fa-solid fa-envelope"></i>
+                baitulikhlasss@gmail.com
+            </p>
+
+            <p><i class="fa-solid fa-calendar"></i>
+                01 Desember 2003
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+    <h2>WELCOME TO MY WEBSITE</h2>
+
+
+</footer>
+
+</body>
+</html>
+<button class="music-btn" onclick="toggleMusic()">
+    <i class="fa fa-music"></i>
+</button>
+
+<script>
+
+const music = document.getElementById("music");
+
+function toggleMusic(){
+
+    if(music.paused){
+        music.play();
+    }else{
+        music.pause();
+    }
+
+}
+
+</script>
+
+
+</script>
+
+</body>
+</html>
